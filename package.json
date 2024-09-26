@@ -1,0 +1,59 @@
+{
+  "name": "skenderl.react.file_browser",
+  "private": true,
+  "author": "skenderl",
+  "description": "File Browser",
+  "version": "0.0.1",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "File",
+    "File Browser"
+  ],
+  "scripts": {
+    "start:dev": "vite",
+    "prebuild": "rimraf dist/ && node scripts/generate_build.js",
+    "build": "tsc && vite build",
+    "start:preview": "vite preview",
+    "lint:scripts": "eslint -c .eslintrc.js --ext .tsx src",
+    "lint:styles": "stylelint \"src/**/*.css\"",
+    "prettier:check": "prettier --check ./src",
+    "prettier:fix": "prettier --write ./src",
+    "pre-commit": "lint-staged",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "axios": "1.7.7",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router-dom": "6.26.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.9.0",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "@typescript-eslint/eslint-plugin": "8.7.0",
+    "@typescript-eslint/parser": "8.7.0",
+    "@vitejs/plugin-react": "4.3.1",
+    "eslint": "9.9.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-html": "8.1.2",
+    "eslint-plugin-prettier": "5.2.1",
+    "eslint-plugin-react": "7.36.1",
+    "eslint-plugin-react-hooks": "5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "0.4.9",
+    "globals": "15.9.0",
+    "husky": "9.1.6",
+    "lint-staged": "15.2.10",
+    "prettier": "3.3.3",
+    "typescript": "5.5.3",
+    "typescript-eslint": "8.0.1",
+    "vite": "5.4.1",
+    "vite-tsconfig-paths": "5.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
